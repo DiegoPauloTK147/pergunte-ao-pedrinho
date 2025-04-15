@@ -89,13 +89,19 @@ a {
     text-decoration: none;
 }
 
+.tags-external{
+    padding: 10px;
+    margin-bottom: 80px;
+}
+
 footer {
+    color: white;
     position: fixed;
     width: 100vw;
     display: flex;
     justify-content: center;
     padding: 25px;
-    background-color: aliceblue;
+    background-color: #720000;
     margin: 0 auto;
     bottom: 0px;
 
