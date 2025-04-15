@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS original para desktop */
+* {
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box; /* Adicionado para consistência, não afeta o layout desktop */
+}
+
+body {
+    background-color: #720000;
+    padding-top: 50px;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    margin-right: 50px;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+}
+
+button {
+    background-color: green;
+    color: aliceblue;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none; /* Adicionado para consistência, não visível no layout */
+    cursor: pointer; /* Adicionado para usabilidade, não afeta visual */
+}
+
+.nomenclature {
+    display: inline-block;
+    place-items: center;
+    margin-top: 20px;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+    width: 700px;
+    border-radius: 5px;
+    margin: 0px auto;
+    margin-top: 15px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.information {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    background-color: rgb(224, 224, 224);
+    width: 700px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+a {
+    background-color: rgb(150, 150, 150);
+    color: azure;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background-color: aliceblue;
+    margin: 0 auto;
+    bottom: 0px;
+
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 600px) {
+    body {
+    
+        margin: 0px auto;
+    }
+
+    main {
+        width: 95%;
+        padding: 15px; /* Leve redução para otimizar espaço */
+        margin: 0 auto;
+    }
+
+    img {
+        width: 100px; /* Reduz tamanho da imagem */
+       margin: 0px auto;
+
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduz tamanho do título */
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: grid; /* Empilha input e botão */
+        align-items: center; /* Centraliza */
+        gap: 10px; /* Espaçamento entre elementos */
+    }
+
+    input {
+        width: 100%; /* Ocupa toda a largura */
+        max-width: 400px; /* Limite para não parecer exagerado */
+        height: 35px; /* Ajustado para toque fácil */
+    }
+
+    button {
+        width: 170px; /* Botão ocupa toda a largura */
+        max-width: 400px; /* Limite para proporção */
+        margin-left: 0; /* Remove margem fixa */
+    }
+
+    .nomenclature {
+        width: 100%; /* Ocupa toda a largura */
+        margin: 15px 0; /* Ajusta margens */
+    }
+
+    .information {
+        width: 100%; /* Ocupa toda a largura */
+        height: auto; /* Remove altura fixa para se adaptar ao conteúdo */
+        min-height: 150px; /* Altura mínima para evitar colapso */
+        margin: 5px 0; /* Ajusta margens */
+    }
+
+    a {
+        width: 100%; /* Link ocupa toda a largura */
+        max-width: 300px; /* Limite para proporção */
+        text-align: center; /* Centraliza texto */
+        margin: 10px auto; /* Centraliza e ajusta margem */
+        display: block; /* Garante comportamento de bloco */
+    }
+
+    .cabecalho{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 0px;
+        margin: 0px auto;
+    }
+}
