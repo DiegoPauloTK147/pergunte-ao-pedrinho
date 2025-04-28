@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* CSS original para desktop */
 * {
     margin: 0px auto;
     padding: 0px;
-    box-sizing: border-box; /* Adicionado para consistência, não afeta o layout desktop */
+    box-sizing: border-box;
 }
 
 body {
@@ -45,20 +44,29 @@ input {
     height: 30px;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 button {
     background-color: green;
     color: aliceblue;
     padding: 10px 15px;
     border-radius: 5px;
     margin-left: 10px;
-    border: none; /* Adicionado para consistência, não visível no layout */
-    cursor: pointer; /* Adicionado para usabilidade, não afeta visual */
+    border: none;
+    cursor: pointer;
 }
 
 .nomenclature {
     display: inline-block;
     place-items: center;
-    margin-top: 20px;
     height: 40px;
     background-color: rgb(224, 224, 224);
     width: 700px;
@@ -70,15 +78,15 @@ button {
 }
 
 .information {
-    display: inline-block;
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 500px;
     background-color: rgb(224, 224, 224);
     width: 700px;
     border-radius: 5px;
     padding: 10px;
     text-align: left;
+    min-height: 500px;
 }
 
 a {
@@ -89,7 +97,7 @@ a {
     text-decoration: none;
 }
 
-.tags-external{
+.tags-external {
     padding: 10px;
     margin-bottom: 80px;
 }
@@ -104,76 +112,72 @@ footer {
     background-color: #720000;
     margin: 0 auto;
     bottom: 0px;
-
 }
 
-/* Media Queries para dispositivos móveis */
 @media (max-width: 600px) {
     body {
-    
         margin: 0px auto;
     }
 
     main {
         width: 95%;
-        padding: 15px; /* Leve redução para otimizar espaço */
+        padding: 15px;
         margin: 0 auto;
     }
 
     img {
-        width: 100px; /* Reduz tamanho da imagem */
-       margin: 0px auto;
-
+        width: 100px;
+        margin: 0px auto;
     }
 
     h1 {
-        font-size: 1.5rem; /* Reduz tamanho do título */
+        font-size: 1.5rem;
         padding: 20px;
+        text-align: left;
     }
 
     .header {
-        flex-direction: grid; /* Empilha input e botão */
-        align-items: center; /* Centraliza */
-        gap: 10px; /* Espaçamento entre elementos */
+        flex-direction: grid;
+        align-items: center;
+        gap: 10px;
     }
 
     input {
-        width: 100%; /* Ocupa toda a largura */
-        max-width: 400px; /* Limite para não parecer exagerado */
-        height: 35px; /* Ajustado para toque fácil */
+        width: 100%;
+        max-width: 400px;
+        height: 35px;
     }
 
     button {
-        width: 170px; /* Botão ocupa toda a largura */
-        max-width: 400px; /* Limite para proporção */
-        margin-left: 0; /* Remove margem fixa */
+        width: 170px;
+        max-width: 400px;
+        margin-left: 0;
     }
 
     .nomenclature {
-        width: 100%; /* Ocupa toda a largura */
-        margin: 15px 0; /* Ajusta margens */
+        width: 100%;
+        margin: 15px 0;
     }
 
     .information {
-        width: 100%; /* Ocupa toda a largura */
-        height: auto; /* Remove altura fixa para se adaptar ao conteúdo */
-        min-height: 150px; /* Altura mínima para evitar colapso */
-        margin: 5px 0; /* Ajusta margens */
+        width: 100%;
+        height: auto;
+        min-height: 150px;
+        margin: 5px 0;
     }
 
     a {
-        width: 100%; /* Link ocupa toda a largura */
-        max-width: 300px; /* Limite para proporção */
-        text-align: center; /* Centraliza texto */
-        margin: 10px auto; /* Centraliza e ajusta margem */
-        display: block; /* Garante comportamento de bloco */
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin: 10px auto;
+        display: block;
     }
 
-    .cabecalho{
+    .cabecalho {
         display: flex;
         flex-direction: column;
         padding: 0px;
-
         justify-content: center;
         align-items: center;
         text-align: center;
