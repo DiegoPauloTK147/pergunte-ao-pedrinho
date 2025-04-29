@@ -75,6 +75,8 @@ button {
     margin-top: 15px;
     padding-left: 10px;
     text-align: left;
+    align-items: center;
+    justify-content: center;
 }
 
 .information {
